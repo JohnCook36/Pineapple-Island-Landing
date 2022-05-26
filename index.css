@@ -5,6 +5,7 @@
     --colorWhite: #FFFFFF;
     --fontFamylyManrope: "Manrope", sans-serif;
     --fontFamylyPlayfairDisplay: "Playfair Display", sans-serif;
+    --fontFamylyLato: "Lato", sans-serif;
 }
 
 body {
@@ -86,6 +87,59 @@ header {
     background-color: var(--colorBlueHover);
 }
 
+/*Intro
+=================================*/
+
+.intro {
+    display: flex;
+    position: relative;
+    justify-content: end;
+    margin-top: 32px;
+}
+
+.intro__container {
+    position: absolute;
+    top: 125px;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 786px;
+    margin-left: 100px;
+    padding: 80px 42px 64px 89px ;
+    background-color: var(--colorBlue);
+}
+
+.intro__title {
+    max-width: 643px;
+    font-family: var(--fontFamylyPlayfairDisplay);
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--colorWhite);
+}
+
+.intro__subtitle {
+    max-width: 643px;
+    margin-top: 34px;
+    color: var(--colorWhite);
+}
+
+.intro__btn {
+    display: none;
+}
+
+.img__item {
+    display: flex;
+    height: 717px;
+    max-width: 1360px;
+    background: url("img/intro.png") center no-repeat;
+    background-size: cover;
+
+}
+
+
 /*Media
 =================================*/
 
@@ -100,6 +154,13 @@ header {
 
     .nav__item {
         margin-left: 40px;
+    }
+
+    /*Intro
+   ===============================*/
+
+    .intro__container {
+        margin-left: 20px;
     }
 }
 
@@ -129,5 +190,48 @@ header {
     .header__btn {
         display: none;
     }
-}
 
+    /*Intro
+   ===============================*/
+
+    .intro {
+        display: block;
+    }
+
+    .intro__container {
+        position: static;
+        padding: 0;
+        margin: 0 20px;
+        min-height: 673px;
+        background: url("img/mobile_intro.png") center no-repeat;
+        background-size: cover;
+    }
+
+    .intro__title {
+        text-align: center;
+        font-size: 28px;
+        color: var(--colorWhite);
+    }
+
+    .intro__subtitle {
+        font-size: 16px;
+        align-items: center;
+        text-align: center;
+        margin-top: 24px;
+        padding: 5px;
+    }
+
+    .intro__btn {
+        display: block;
+        font-family: var(--fontFamylyLato);
+        font-weight: 500;
+        margin-top: 37px;
+        padding: 11px 19px;
+        border-radius: 5px;
+        background-color: var(--colorWhite);
+    }
+
+    .img__item {
+        display: none;
+    }
+}
